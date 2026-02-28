@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Engineering | KMITL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* จัด Layout หลักให้อยู่ตรงกลางและดัน Footer ลงไปล่างสุด */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .hero-title {
+            font-size: 3rem; color: var(--secondary-color); margin-bottom: 10px;
+        }
+        .flex-container {
+            display: flex; gap: 20px; justify-content: space-between; margin-top: 40px;
+        }
+        /* Mobile Responsive สำหรับหน้า Index */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2rem; }
+            .flex-container { flex-direction: column; }
+            .flex-container > div { width: 100% !important; }
+            .mobile-menu-btn { display: block !important; }
+            #nav-menu { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    
+</body>
+</html>

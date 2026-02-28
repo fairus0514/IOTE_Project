@@ -1,0 +1,45 @@
+/* Import ฟอนต์ที่ดูคลีนๆ (Lato และ Prompt) */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Prompt:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #E67E22; /* สีส้มสไตล์ Flat */
+    --secondary-color: #2C3E50; /* สีเทาเข้ม/น้ำเงินกรมท่า */
+    --bg-color: #F8F9F9; /* สีพื้นหลังสว่างสบายตา */
+    --text-color: #333333;
+    --font-main: 'Lato', 'Prompt', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* สไตล์กล่องเนื้อหา (Card) แบบ Flat */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px; /* ขอบมน */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* เงาบางๆ */
+    margin-bottom: 20px;
+}
+
+/* สไตล์ปุ่มแบบ Flat */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background-color: #D35400;
+}
