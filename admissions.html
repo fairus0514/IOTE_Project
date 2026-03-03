@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission | IoT & Information Engineering KMITL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="mit-container">
+        <section class="hero-section outline-border">
+            <h1 class="massive-text">ADMISSION<br>2026.</h1>
+            <p class="sub-hero">วิศวกรรมระบบไอโอทีและสารสนเทศ สจล.</p>
+            <div class="vision-box" style="margin-top: 20px; border-top: 2px solid black; padding-top: 20px;">
+                <p><strong>VISION:</strong> สร้างบุคลากรที่เชื่อมโยงโลกดิจิทัล บูรณาการ <em>Hardware, Software, Network</em> ผสานพลัง <em>AI & Data Science</em> และมุ่งเน้นความเป็นผู้ประกอบการ (Entrepreneurship) เพื่อสร้างนวัตกรรมที่จับต้องได้</p>
+            </div>
+        </section>
+
+        <section class="programs-section outline-border" id="programs-section">
+            <h2 class="section-title">PROGRAMS & CURRICULUM</h2>
+            
+            <div class="grid-3-col">
+                <div class="program-card tab-btn active" onclick="openProgram(event, 'prog-normal', '฿25,000', 'ต่อภาคการศึกษา (หลักสูตรปกติ)')">
+                    <h3>วศ.บ. ระบบไอโอที (ปกติ)</h3>
+                    <p style="font-size: 0.9rem;">สายตรงวิทย์-คณิต เน้น IoT ครบวงจร</p>
+                </div>
+                <div class="program-card tab-btn" onclick="openProgram(event, 'prog-double', '฿45,000', 'ต่อภาคการศึกษา (หลักสูตรสองปริญญา)')">
+                    <h3>สองปริญญา (IoT + ฟิสิกส์ฯ)</h3>
+                    <p style="font-size: 0.9rem;">ลึกซึ้งทั้งฟิสิกส์และวิศวกรรม สร้างเซนเซอร์ขั้นสูง</p>
+                </div>
+                <div class="program-card tab-btn" onclick="openProgram(event, 'prog-cont', '฿25,000', 'ต่อภาคการศึกษา (หลักสูตรต่อเนื่อง)')">
+                    <h3>วศ.บ. คอมฯ และไอโอที (ต่อเนื่อง)</h3>
+                    <p style="font-size: 0.9rem;">ต่อยอดสายอาชีวะ สู่ผู้เชี่ยวชาญ IoT</p>
+                </div>
+            </div>
+
+            <div id="prog-normal" class="program-content" style="display: block;">
+                <p>เน้นบูรณาการ Hardware, Software และ Network เพื่อสร้างระบบ IoT ครบวงจร เหมาะสำหรับนักเรียนแผนการเรียนวิทยาศาสตร์-คณิตศาสตร์ ที่ต้องการเป็นวิศวกรสายตรง</p>
+            </div>
+            <div id="prog-double" class="program-content" style="display: none;">
+                <p>บูรณาการศาสตร์ทางฟิสิกส์ประยุกต์เข้ากับวิศวกรรมไอโอที เพื่อการสร้างนวัตกรรมระดับลึก ผู้ที่ต้องการความรู้ทั้งด้านทฤษฎีทางฟิสิกส์และทักษะทางวิศวกรรม <strong>*หมายเหตุ: บางรูปแบบรับสมัครใช้น้ำหนัก TPAT3 ถึง 80%</strong></p>
+            </div>
+            <div id="prog-cont" class="program-content" style="display: none;">
+                <p>เน้นการต่อยอดจากสายอาชีวะหรือพื้นฐานคอมพิวเตอร์เดิม เพื่อเข้าสู่สายงานไอโอทีอย่างเต็มรูปแบบ</p>
+            </div>
+        </section>
+
+        <section class="tcas-section outline-border">
+            <h2 class="section-title">TCAS 2569 ADMISSION</h2>
+            
+            <button class="accordion">ROUND 1: PORTFOLIO (ศักยภาพพิเศษ)</button>
+            <div class="panel">
+                <ul class="clean-list">
+                    <li><strong>Young Engineering Talent:</strong> GPAX 3.50+ รางวัลระดับชาติ/นานาชาติ (กลุ่ม Elite)</li>
+                    <li><strong>โครงการเรียนดี (ช้างเผือก):</strong> อันดับ 1 ของโรงเรียนในเครือข่าย</li>
+                    <li><strong>ผลงานวิชาการ (Academic Awards):</strong> GPAX 3.00+ เน้นนักปฏิบัติ โครงงานสร้างสรรค์</li>
+                    <li><strong>โรงเรียนวิทยาศาสตร์:</strong> สำหรับกลุ่ม SMTE พื้นฐานวิจัยเข้มแข็ง</li>
+                    <li><strong>K-Engineering Pathway:</strong> 30 คน (ผ่าน Pre-Eng สจล. GPAX 3.50)</li>
+                    <li><strong>โอลิมปิกวิชาการ (สอวน.):</strong> 40 คน (ผ่านค่าย 2 คณิต/ฟิสิกส์/คอมฯ GPAX 2.75+)</li>
+                </ul>
+            </div>
+
+            <button class="accordion">ROUND 2: QUOTA (ขยายโอกาส)</button>
+            <div class="panel">
+                <ul class="clean-list">
+                    <li><strong>โควตากิจกรรม K-Engineering:</strong> มอบสิทธิ์ผู้ผ่านกิจกรรมคณะวิศวะฯ (GPAX 2.75+)</li>
+                    <li><strong>โควตาเรียนดี (Academic Quota):</strong> GPAX 3.00+</li>
+                    <li><strong>โควตา KMITL One:</strong> โครงการความร่วมมือระดับสถาบัน (GPAX 3.00+)</li>
+                </ul>
+            </div>
+
+            <button class="accordion">ROUND 3: ADMISSION (ส่วนกลาง)</button>
+            <div class="panel">
+                <p>ใช้คะแนนสอบมาตรฐาน (ทปอ.) เน้น "ความคิดแบบวิศวกร"</p>
+                <div class="score-grid">
+                    <div><strong>TGAT:</strong> 20% (สื่อสาร/คิดวิพากษ์)</div>
+                    <div><strong>TPAT3:</strong> 25% - 80% (ความถนัดวิศวะ)</div>
+                    <div><strong>A-Level คณิต 1:</strong> 25% - 40%</div>
+                    <div><strong>A-Level ฟิสิกส์:</strong> 30% - 40%</div>
+                </div>
+            </div>
+
+            <button class="accordion">INTERNATIONAL PROGRAM (SIIE)</button>
+            <div class="panel">
+                <p>รองรับนักเรียนนานาชาติ (Conditional Admission สำหรับผู้ที่ภาษาอังกฤษยังไม่ถึงเกณฑ์)</p>
+                <p><strong>Math Requirements:</strong> SAT (600), GSAT (600), ACT (23), IB (5), AP Calculus (4)</p>
+                <p><strong>English Requirements:</strong> IELTS (6.0), TOEFL iBT (79)</p>
+            </div>
+        </section>
+
+        <section class="grid-2-col outline-border">
+            <div class="info-box border-right">
+                <h2 class="section-title">CANDIDATE JOURNEY</h2>
+                <ol class="step-list">
+                    <li><strong>Register:</strong> ระบบ new.reg.kmitl.ac.th เลือกระบุสัญชาติ</li>
+                    <li><strong>Select Rank:</strong> เลือกได้ 3 อันดับ (สัมภาษณ์อันดับ 1 เท่านั้น)</li>
+                    <li><strong>Upload PDF:</strong> ไฟล์เดียวขนาดไม่เกิน 4MB (ตั้งชื่อตามฟอร์แมต)</li>
+                    <li><strong>Portfolio:</strong> ไม่เกิน 10 หน้า (รวมปก) เน้น Coding/วงจร/โครงงาน</li>
+                    <li><strong>Payment:</strong> 300 บาท (ปกติ) / 1,000 บาท (นานาชาติ) ผ่าน Mobile Banking</li>
+                </ol>
+            </div>
+            <div class="info-box">
+                <h2 class="section-title">INTERVIEW RUBRIC</h2>
+                <ul class="clean-list">
+                    <li><strong>Problem Solving:</strong> อธิบายแนวคิดแก้ปัญหาเป็นระบบ</li>
+                    <li><strong>Code Fluency:</strong> ความคล่องแคล่วในการเขียนโปรแกรม/อ่านโค้ด</li>
+                    <li><strong>Autonomy:</strong> ภาวะผู้นำและความเป็นเจ้าของงาน</li>
+                    <li><strong>CS Basics:</strong> โครงสร้างข้อมูล (Data Structures) & อัลกอริทึม</li>
+                    <li><strong>Resoluteness:</strong> ทัศนคติและความมุ่งมั่น</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="grid-2-col outline-border" style="background-color: #000; color: #fff;">
+            <div class="info-box border-right" style="border-color: #333;">
+                <h2 class="section-title" style="border-color: #fff; color: #E04500;">INVESTMENT</h2>
+                <h3 class="huge-fee" id="tuition-fee" style="color: #fff;">฿25,000</h3>
+                <p id="tuition-desc">ต่อภาคการศึกษา (หลักสูตรปกติ)</p>
+                <p style="font-size: 0.8rem; color: #aaa; margin-top: 10px;">*นโยบายค่าธรรมเนียมคงที่ (Flat Rate) ตลอด 4 ปี<br>*หลักสูตรนานาชาติ 90,000 - 175,000 บาท</p>
+            </div>
+            <div class="info-box">
+                <h2 class="section-title" style="border-color: #fff; color: #E04500;">SCHOLARSHIPS</h2>
+                <ul class="clean-list">
+                    <li><strong>Academic Excellence:</strong> ลดหย่อน 50-100% (GPAX 3.50+)</li>
+                    <li><strong>Special Talent:</strong> ผู้มีผลงานนวัตกรรม/หุ่นยนต์/NSC/NECTEC</li>
+                    <li><strong>Financial Aid:</strong> ลดหย่อน 9,500 - 14,250 บาท</li>
+                    <li><strong>Work Integrated Learning (WiL):</strong> ทุนจากเอกชน เรียนพร้อมทำงานจริง การันตีงานหลังจบ</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="outline-border">
+            <h2 class="section-title">ECOSYSTEM & CAREERS</h2>
+            <div class="grid-2-col" style="margin-top: 20px;">
+                <div>
+                    <h3>📍 อาคาร E-12 & Labs</h3>
+                    <p>ศูนย์กลางการเรียนรู้ที่ทันสมัย พร้อม <strong>IT and IoT Cyber Security Laboratory</strong> (วิจัย Network, AI Cyber, Pentesting และ Sandboxing)</p>
+                    <p><strong>Campus Life:</strong> หอพักใน/นอกสถาบัน, เดินทางสะดวก (รถไฟตะวันออก, Airport Link ลาดกระบัง), บริการสุขภาพฟรี, ห้องสมุดคลุมทั้งวิทยาเขต</p>
+                </div>
+                <div>
+                    <h3>🚀 Industry 4.0 Careers</h3>
+                    <p>IoT Engineer, Embedded System Engineer (EV/Medical), Cybersecurity Engineer, Data Engineer, Full Stack Developer</p>
+                    <p><strong>Networks:</strong> โอกาสร่วมงานบริษัทระดับโลก เช่น Huawei, Cisco, Nokia, AIS, True</p>
+                    <a href="https://new.reg.kmitl.ac.th/admission" target="_blank" class="brutal-btn" style="background-color: var(--accent-color); color: white;">APPLY NOW ↗</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

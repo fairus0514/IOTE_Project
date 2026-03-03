@@ -313,3 +313,133 @@ body {
         text-align: center;
     }
 }
+/*ส่วนของหน้า admission */
+* {
+    box-sizing: border-box;
+}
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #E04500;
+    --border-color: #000000;
+}
+
+body {
+    font-family: 'Space Grotesk', 'Noto Sans Thai', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.mit-container {
+    flex: 1; width: 100%; max-width: 1400px; margin: 0 auto; padding: 20px; box-sizing: border-box;
+}
+
+.outline-border {
+    border: 2px solid var(--border-color); margin-bottom: 20px; padding: 40px; background: #fff;
+}
+
+.massive-text {
+    font-size: clamp(4rem, 8vw, 6rem); line-height: 0.9; margin: 0 0 20px 0; font-weight: 700; letter-spacing: -2px;
+}
+.sub-hero { font-size: 1.5rem; font-weight: 600; max-width: 800px; }
+.section-title { font-size: 2rem; border-bottom: 4px solid var(--text-color); display: inline-block; margin-bottom: 20px; text-transform: uppercase; font-weight: 700; }
+
+.grid-3-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.grid-2-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 0; }
+
+/* Tabs system */
+.tab-btn { border: 2px solid var(--border-color); padding: 20px; cursor: pointer; transition: all 0.2s; background: #fff; }
+.tab-btn:hover { border-color: var(--accent-color); transform: translateY(-3px); }
+.tab-btn.active { background-color: var(--accent-color); color: var(--bg-color); border: 2px solid var(--accent-color); }
+.program-content { margin-top: 20px; padding: 30px; border: 2px solid var(--border-color); background-color: #f9f9f9; animation: fadeIn 0.4s; }
+
+/* Accordion */
+.accordion { background-color: transparent; color: var(--text-color); cursor: pointer; padding: 20px; width: 100%; text-align: left; border: 1px solid var(--border-color); border-bottom: none; outline: none; font-size: 1.2rem; font-weight: 700; transition: 0.2s; }
+.accordion:last-of-type { border-bottom: 1px solid var(--border-color); }
+.accordion:hover, .accordion.active { background-color: var(--accent-color); color: white; }
+.panel { padding: 0 20px; background-color: white; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); }
+.panel.show-border { border-bottom: 1px solid var(--border-color); padding: 20px; }
+
+/* Lists & Misc */
+.clean-list li { margin-bottom: 15px; }
+.step-list li { margin-bottom: 15px; font-size: 1.1rem; }
+/* --- แก้ไขกล่องคะแนนสีเทาไม่ให้ข้อความชิดขอบ --- */
+.score-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; /* เพิ่มระยะห่างระหว่างบรรทัด TGAT กับ A-Level */
+    margin-top: 15px; 
+    padding: 25px; /* ✨ เพิ่มตรงนี้! ดันกรอบสีเทาให้กว้างออก ข้อความจะไม่ชนเส้นบน-ล่าง-ซ้าย-ขวา */
+    background: #f4f4f4; 
+    border: 1px solid #ddd; 
+    margin-bottom: 10px; /* ดันกล่องสีเทาไม่ให้ไปเบียดเส้นขอบด้านล่าง */
+}
+
+/* เพิ่มระยะบรรทัดให้ตัวหนังสือข้างในกล่องสีเทา */
+.score-grid div {
+    line-height: 1.6;
+}
+
+.huge-fee { font-size: clamp(3rem, 5vw, 5rem); margin: 10px 0; transition: color 0.3s; }
+.brutal-btn { display: inline-block; background-color: var(--text-color); color: var(--bg-color); padding: 15px 30px; text-decoration: none; font-weight: bold; font-size: 1.2rem; margin-top: 20px; transition: 0.3s; border: 2px solid transparent; }
+.brutal-btn:hover { background-color: transparent; color: var(--text-color); border: 2px solid var(--text-color); }
+
+.info-box { padding: 20px ; }
+.border-right { border-right: 2px solid var(--border-color);  }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 768px) {
+    .grid-2-col { grid-template-columns: 1fr; gap: 20px; }
+    .border-right { border-right: none; padding-right: 0; border-bottom: 2px solid #555; padding-bottom: 20px; }
+    .outline-border { padding: 20px; }
+    .score-grid { grid-template-columns: 1fr; }
+}
+/* โค้ดสำหรับดันลิสต์ข้อความไม่ให้ชิดขอบซ้าย */
+.clean-list, .step-list {
+    padding-left: 25px !important; /* ดันตัวเลขและจุดไข่ปลาให้ขยับมาทางขวา 25px */
+    margin-top: 10px;
+}
+
+.step-list li, .clean-list li {
+    margin-bottom: 15px; 
+    font-size: 1.1rem;
+    line-height: 1.6; /* เพิ่มช่องไฟระหว่างบรรทัดให้อ่านง่าย ไม่เบียดกัน */
+}
+/* --- แก้ปัญหากล่อง ROUND 1, 2, 3 ข้อความชิดขอบล่าง --- */
+.panel.show-border {
+    padding-top: 25px !important;
+    padding-bottom: 35px !important; /* ✨ เพิ่มเบาะรองนั่งด้านล่าง 35px ให้ข้อความหายใจออก */
+}
+
+/* บังคับไม่ให้ลิสต์บรรทัดสุดท้ายสร้างระยะห่าง (Margin) ไปดันกรอบจนเกินไป */
+.panel .clean-list {
+    margin-bottom: 0 !important;
+    padding-bottom: 10px;
+}
+/* --- เปลี่ยนพื้นหลังส่วนกรอบบนสุด (ADMISSION 2026) เป็นสีส้มอ่อน --- */
+/* --- เปลี่ยนพื้นหลังส่วนกรอบบนสุดเป็นรูปภาพ --- */
+.hero-section {
+    /* 1. ดึงรูปภาพมาใส่ (สังเกต ../ คือการถอยออกจากโฟลเดอร์ css ไปหาโฟลเดอร์ images) */
+    background-image: url('../images/iot.jpg') !important;
+    
+    /* 2. จัดระเบียบรูปภาพให้สวยงาม */
+    background-size: cover !important; /* บังคับให้รูปขยายเต็มกรอบพอดี */
+    background-position: center !important; /* จัดรูปให้อยู่กึ่งกลางเสมอ */
+    background-repeat: no-repeat !important; /* ป้องกันไม่ให้รูปลอกลายซ้ำๆ กัน */
+    
+    /* 3. สีตัวหนังสือ (ปรับได้ตามความมืด/สว่างของรูป) */
+    color: #ffffff !important; /* ถ้ารูปคุณมืด ให้ใช้ตัวหนังสือสีขาว (#ffffff) */
+}
+
+/* เปลี่ยนสีเส้นคั่นตรงคำว่า VISION ให้เข้ากับตัวหนังสือ */
+.hero-section .vision-box {
+    border-top: 2px solid #ffffff !important; 
+}
