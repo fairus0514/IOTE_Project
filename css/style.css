@@ -43,3 +43,273 @@ body {
 .btn:hover {
     background-color: #D35400;
 }
+/* =========================================
+   Header & Navigation (Desktop)
+========================================= */
+.main-header {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+.logo-img { height: 40px; }
+.mobile-menu-btn { display: none; font-size: 28px; color: var(--secondary-color); cursor: pointer; }
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.nav-link:hover { color: var(--primary-color); }
+
+/* --- Dropdown Menu (Desktop) --- */
+.dropdown { position: relative; }
+.dropdown-menu {
+    display: none; /* ซ่อนเมนูย่อยไว้ก่อน */
+    position: absolute; /* ให้กล่องลอยขึ้นมา ไม่ดันเมนูอื่น */
+    top: 100%;
+    left: 0;
+    background-color: #FFFFFF;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    flex-direction: column;
+    padding: 10px 0;
+    margin-top: 15px;
+    z-index: 1000;
+}
+.dropdown-menu.show {
+    display: flex; /* แสดงกล่องเมื่อถูกคลิก (JS จะมาเติมคลาสนี้) */
+    animation: fadeIn 0.2s ease-in-out;
+}
+.dropdown-menu li { list-style: none; width: 100%; }
+.dropdown-menu a {
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+.dropdown-menu a:hover { background-color: #F8F9F9; color: var(--primary-color); }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   Mobile Responsive (Half-page dropdown)
+========================================= */
+@media (max-width: 768px) {
+    .main-header { padding: 15px 20px; }
+    .mobile-menu-btn { display: block; } /* โชว์ปุ่มแฮมเบอร์เกอร์ */
+    
+    .nav-list {
+        display: none; /* ซ่อนเมนูแนวนอน */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 50vh; /* คลุมครึ่งหน้าจอตามสั่ง! */
+        background-color: #FFFFFF;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        z-index: 999;
+    }
+    .nav-list.active { display: flex; }
+    .nav-list li { margin: 15px 0; width: 100%; text-align: center; }
+    .nav-link { font-size: 1.2rem; }
+    
+    /* ปรับเมนูย่อยในมือถือไม่ให้ลอยมั่ว */
+    .dropdown-menu {
+        position: relative; 
+        box-shadow: none;
+        background-color: #F8F9F9;
+        margin-top: 10px;
+    }
+}
+/* =========================================
+   Complex Footer (Fat Footer)
+========================================= */
+.complex-footer {
+    width: 100%;
+    margin-top: auto;
+    color: #FFFFFF;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+}
+
+/* 1. ส่วนหลักพื้นหลังสีเทาเข้ม */
+.footer-main {
+    background-color: var(--secondary-color); /* สีเทาเข้ม/กรมท่า ตามธีมของคุณ */
+    padding: 50px 50px 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr; /* แบ่งคอลัมน์ ที่อยู่กว้างสุด */
+    gap: 30px;
+}
+
+.footer-logo {
+    max-width: 180px;
+    margin-bottom: 20px;
+    background-color: white; /* รองพื้นโลโก้เผื่อเป็น PNG โปร่งใส */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.footer-col h4 {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-col p {
+    color: #BDC3C7;
+    line-height: 1.8;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul a {
+    color: #BDC3C7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul a:hover {
+    color: var(--primary-color);
+}
+
+/* ไอคอน Social Media (วงกลมสไตล์ Flat) */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #FFFFFF;
+    color: var(--secondary-color);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+/* 2. แถบเบอร์โทรสีส้ม (KMITL Theme) */
+.footer-phone-bar {
+    background-color: var(--primary-color); /* ใช้สีส้มของคุณ */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.phone-content {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ปุ่มเลื่อนขึ้นบน */
+.back-to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #A04000; /* สีส้มเข้ม */
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+}
+.back-to-top:hover {
+    background-color: #2C3E50;
+}
+
+/* 3. แถบล่างสุด (ลิขสิทธิ์) */
+.footer-bottom {
+    background-color: #1A252F; /* เทาเข้มกว่าส่วนบน */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #95A5A6;
+}
+.footer-bottom-links a {
+    color: #95A5A6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-bottom-links a:hover {
+    color: white;
+}
+
+/* =========================================
+   Responsive Footer (มือถือและแท็บเล็ต)
+========================================= */
+@media (max-width: 992px) {
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr); /* แท็บเล็ต 2 คอลัมน์ */
+    }
+    .address-col {
+        grid-column: 1 / -1; /* ให้ที่อยู่กินพื้นที่เต็ม */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: 1fr; /* มือถือ 1 คอลัมน์ เรียงลงมา */
+        padding: 40px 20px;
+    }
+    .footer-phone-bar {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .footer-bottom {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
