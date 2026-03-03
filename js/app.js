@@ -17,33 +17,42 @@ async function loadComponents() {
 }
 
 // ระบบ Dropdown สำหรับเมนู
+// ควบคุม Dropdown (คำว่า Academic)
 function toggleDropdown(event, dropdownId) {
     event.preventDefault();
     const dropdown = document.getElementById(dropdownId);
-    if (dropdown.style.display === "none" || dropdown.style.display === "") {
-        dropdown.style.display = "flex";
-    } else {
-        dropdown.style.display = "none";
-    }
+    dropdown.classList.toggle("show");
 }
 
-// ระบบ Hamburger Menu สำหรับมือถือ
+// ควบคุมเมนูมือถือ (แฮมเบอร์เกอร์ คลุมครึ่งจอ)
 function toggleMobileMenu() {
     const navMenu = document.getElementById("nav-menu");
-    if (navMenu.style.display === "none" || navMenu.style.display === "") {
-        navMenu.style.display = "flex";
-        navMenu.style.flexDirection = "column";
-        navMenu.style.position = "absolute";
-        navMenu.style.top = "70px";
-        navMenu.style.right = "20px";
-        navMenu.style.backgroundColor = "white";
-        navMenu.style.padding = "20px";
-        navMenu.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
-        navMenu.style.borderRadius = "8px";
-    } else {
-        navMenu.style.display = "none";
+    navMenu.classList.toggle("active");
+}
+
+// ถ้าคลิกพื้นที่อื่นบนจอ ให้หุบ Dropdown เก็บอัตโนมัติ
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn') && !event.target.matches('.mobile-menu-btn')) {
+        const dropdowns = document.getElementsByClassName("dropdown-menu");
+        for (let i = 0; i < dropdowns.length; i++) {
+            if (dropdowns[i].classList.contains('show')) {
+                dropdowns[i].classList.remove('show');
+            }
+        }
+    }
+}
+// ... (โค้ดด้านบนของคุณเหมือนเดิม) ...
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn') && !event.target.matches('.mobile-menu-btn')) {
+        const dropdowns = document.getElementsByClassName("dropdown-menu");
+        for (let i = 0; i < dropdowns.length; i++) {
+            if (dropdowns[i].classList.contains('show')) {
+                dropdowns[i].classList.remove('show');
+            }
+        }
     }
 }
 
-// สั่งให้ทำงานทันทีที่โหลดไฟล์นี้
+// // COMMENT: บรรทัดนี้สำคัญมาก! สั่งให้ดึง Header/Footer ทันทีที่โหลดไฟล์ JS
 loadComponents();
